@@ -1,0 +1,9 @@
+# Build output
+/bin/
+*.exe
+
+# Local environment
+.env
+
+# Go test artefacts
+*.out
