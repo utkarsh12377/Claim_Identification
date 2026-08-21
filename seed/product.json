@@ -1,0 +1,73 @@
+{
+    "data": {
+        "getProduct": {
+            "id": "cfe6aa75-5da8-44f5-b587-56857841ad9f",
+            "mcrId": "IND0000000031",
+            "sku": "",
+            "gtinEan": "4444",
+            "title": "Maggi Nutri-licious Masala Veg Atta Noodles High Proteins Noodles",
+            "brand": "Maggi",
+            "categoryId": 15,
+            "categoryName": "Pasta, Soup, Noodles & Vermicelli",
+            "shortDescription": "Maggi Nutri-licious Masala Veg Atta Noodles are instant noodles made with whole wheat flour and blended with 20 spices and herbs. It offers a masala taste and is a source of fibre and iron. And Safe for children",
+            "aboutItems": [
+                "Masala slow roasted to perfection ",
+                "Appetizing Aroma & Delicious Taste",
+                "Source of Fibre & Iron",
+                "Made with 20 Spices & Herbs",
+                "Pack contains 1 serve"
+            ],
+            "status": "PUBLISHED",
+            "validationScores": {
+                "completeness": 100,
+                "compliance": 100,
+                "correctness": 100,
+                "lqi": 100
+            },
+            "shippingInfo": {},
+            "complianceInfo": {
+                "country_of_origin": "India",
+                "fssai_no": "10012011000168",
+                "manufacturer_details": "Nestlé India Limited, 100/101, World Trade Centre, Barakhamba Lane, New Delhi-110001"
+            },
+            "attributes": {
+                "diet_type": "Vegetarian",
+                "dimension": "",
+                "flavours_and_spices": "Masala, 20 Spices & Herbs",
+                "ingredients": "Noodles: Wheat flour (atta) (85.3%), Palm oil, Iodised salt, Thickeners (508, 412), Humectants (451(i), 452(i)) and Acidity regulators (501(i), 500(i)). Masala *TASTEMAKER®: Mixed spices (22.5%) [^Roasted spice powder (6.4%) (Coriander (1.9%), Turmeric (1.6%), Cumin, Aniseed, Black pepper (0.4%), Fenugreek, Ginger, Clove (0.1%), Green cardamom, Nutmeg), Dehydrated onion (4.2%), Dried garlic, Red chilli powder (2.5%), Red chilli bits (1.1%), Coriander powder (1%), Turmeric powder (0.8%), Dried ginger powder, Aniseed powder, Black pepper powder (0.5%), Cumin powder, ^Roasted cumin (0.4%), Fenugreek powder, ^Roasted garam masala powder (0.3%) (Cinnamon, Bay leaf (0.04%), Green cardamom, Large cardamom, Black pepper (0.02%)), Compounded asafoetida (Refined wheat flour (maida), Carrier (414), Asafoetida), Spice extract blend (Capsicum extract, Coriander extract (0.001%), Cumin extract), Star anise powder (0.2%)], Toasted onion flakes (Onion (12.4%), Corn oil), Sugar, Dehydrated carrot (8.5%), Dehydrated green peas (8.2%), Noodle powder (Refined wheat flour (maida), Palm oil, Iodised salt, Gluten, Thickeners (508, 412), Acidity regulators (501(i), 500(i)), Humectant (451(i))), Toasted onion powder (Onion (5.9%), Corn oil), Corn savoury powder (Com starch, Iodised salt, Yeast extract), Yeast extract powder (Yeast extract, Salt, Sunflower oil), Iodised salt, Thickener (508), Dehydrated Kasuri methi leaves (1.4%), Edible starch, Palm oil, Acidity regulator (330) and Mineral (Ferric pyrophosphate).",
+                "net_quantity": "72.5",
+                "nutritional_details": "Per 100g: Energy 433 kcal, Protein 8.0g, Carbohydrate 63.9g, Total Sugars 2.7g, Fiber 5.0g, Total Fat 16.2g, Sodium 1108.0mg, Iron 3.70mg",
+                "pack_quantity": "1",
+                "pack_size": "72.5g",
+                "preservatives_details": "",
+                "preservatives_yn": false,
+                "ready_to_cook_yn": true,
+                "ready_to_eat_yn": false,
+                "storage_instructions": "STORE IN A COOL, DRY & HYGIENIC PLACE TO PROTECT FROM INSECTS, PESTS & STRONG ODOURS.",
+                "uom": "g",
+                "usage_details": "Cook for 3 minutes"
+            },
+            "createdAt": "2026-01-13T15:29:26.002799Z",
+            "updatedAt": "2026-01-14T07:55:14.913435Z",
+            "media": [
+                {
+                    "id": "3199e673-c440-4443-9179-04a8c9e991e4",
+                    "url": "https://storage.googleapis.com/mcr-platform-files/uuid-106/images/b2266725-47ed-42f3-8ea5-30e64b761065.jpg",
+                    "mediaType": "IMAGE",
+                    "path": "uuid-106/images/b2266725-47ed-42f3-8ea5-30e64b761065.jpg",
+                    "sortOrder": 0,
+                    "altText": "Image"
+                },
+                {
+                    "id": "91f7066f-3070-4b1c-9288-704079884f88",
+                    "url": "https://storage.googleapis.com/mcr-platform-files/uuid-106/images/b6106278-e547-4cce-b654-b895aa350fac.jpg",
+                    "mediaType": "IMAGE",
+                    "path": "uuid-106/images/b6106278-e547-4cce-b654-b895aa350fac.jpg",
+                    "sortOrder": 1,
+                    "altText": "Image"
+                }
+            ],
+            "claims": null
+        }
+    }
+}
