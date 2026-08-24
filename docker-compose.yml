@@ -1,0 +1,26 @@
+# Local PostgreSQL for the claim-identification service.
+#
+#   docker compose up -d
+#   DATABASE_URL="postgres://claims:claims@localhost:5432/claims?sslmode=disable" go run ./cmd/server
+#
+# The service applies its own schema migrations on start-up.
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: claims-postgres
+    environment:
+      POSTGRES_USER: claims
+      POSTGRES_PASSWORD: claims
+      POSTGRES_DB: claims
+    ports:
+      - "5432:5432"
+    volumes:
+      - claims-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U claims -d claims"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  claims-pgdata:
