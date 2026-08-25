@@ -1,5 +1,7 @@
 # Product Claim Identification Workflow
 
+[![ci](https://github.com/utkarsh12377/Claim_Identification/actions/workflows/ci.yml/badge.svg)](https://github.com/utkarsh12377/Claim_Identification/actions/workflows/ci.yml)
+
 A Go service that reads a product document, detects marketing and compliance
 claims in it, classifies them into the thirteen assignment categories, and
 returns the original product JSON enriched with a `claims` array.
@@ -321,6 +323,29 @@ The expired `?Expires=…&Signature=…` query strings were trimmed from
 
 ---
 
+## Running in Docker
+
+The `Dockerfile` builds a static binary and ships it on a minimal Alpine image
+running as an unprivileged user:
+
+```bash
+docker build -t claim-identification .
+docker run --rm -p 8080:8080 claim-identification
+```
+
+The image bundles `seed/product.json` and `assets/images`, so the container is
+usable straight away with the in-memory store. To run it against the PostgreSQL
+instance from `docker-compose.yml`:
+
+```bash
+docker compose up -d
+docker run --rm -p 8080:8080 \
+     -e DATABASE_URL="postgres://claims:claims@host.docker.internal:5432/claims?sslmode=disable" \
+     claim-identification
+```
+
+---
+
 ## Configuration
 
 All settings are environment variables with working defaults — see
@@ -382,9 +407,13 @@ go test ./...
 | `internal/claims` | Golden test pinning the exact claims for the sample product; a false-positive suite over the product's own copy and lookalike phrasings; every example claim from the assignment's table mapped to its category; dedupe, overlap, negation, placeholder rejection |
 | `internal/workflow` | Completion, failure recording, queue saturation, shutdown behaviour, double-close rejection, state machine |
 | `internal/httpapi` | Trigger → poll → enriched product; request validation; 404/405 handling; product round-trip fidelity; eight concurrent runs |
+| `internal/config` | Defaults, environment overrides, bare-`PORT` normalisation, and rejection of malformed booleans, integers, durations and log levels |
+| `internal/store/memory` | Product round-trip, copy-on-read isolation, terminal-state transition rules, not-found errors |
+| `internal/uid` | UUID v4 layout and variant bits, workflow ID format, uniqueness across repeated draws |
 
-The race detector (`go test -race`) needs cgo and a C toolchain, which is not
-installed on this machine, so it has not been run here.
+Every push and pull request runs the same suite in CI (`.github/workflows/ci.yml`)
+under `go test -race`, alongside a `gofmt` check, `go mod tidy` verification and
+`go vet`.
 
 ---
 
@@ -403,3 +432,9 @@ installed on this machine, so it has not been run here.
   handler over `store.UpsertProduct`.
 - **One product per run.** Batch identification across a catalogue would reuse
   the same engine with a fan-out job type.
+
+---
+
+## License
+
+Released under the [MIT License](LICENSE).
