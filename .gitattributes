@@ -1,0 +1,13 @@
+# Keep the repository canonical on LF so checkouts on Windows, Linux and CI
+# agree byte for byte and gofmt does not report phantom diffs.
+* text=auto eol=lf
+
+*.go      text eol=lf
+*.sql     text eol=lf
+*.json    text eol=lf
+*.yml     text eol=lf
+*.md      text eol=lf
+Makefile  text eol=lf
+
+*.jpg binary
+*.png binary
