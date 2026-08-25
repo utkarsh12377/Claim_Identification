@@ -1,0 +1,18 @@
+.git
+.github
+.gitattributes
+.gitignore
+
+# Build output and local environment
+bin/
+*.exe
+*.out
+.env
+
+# Not needed inside the image
+Dockerfile
+.dockerignore
+docker-compose.yml
+Makefile
+README.md
+LICENSE
